@@ -2,6 +2,8 @@ package gna;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 /**
@@ -11,7 +13,14 @@ public class Tests {
 
     @Test
     public void testSeam() throws Exception {
-        ImageCompositor oImgComp = new ImageCompositor();
-
+        Stitcher oStitch = new Stitcher();
+        int[][] img1 = new int[][]{ {1,1,2},
+                                    {3,1,3},
+                                    {3,1,1}};
+        int[][] img2 = new int[][]{ {1,1,5},
+                                    {2,1,9},
+                                    {7,1,1}};
+        ArrayList<Position> alPos = (ArrayList<Position>) oStitch.seam(img1, img2);
+        System.out.print(alPos);
     }
 }
