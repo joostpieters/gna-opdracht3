@@ -1,8 +1,8 @@
 package gna;
 
-import java.util.List;
-import libpract.*;
+import java.util.*;
 
+import libpract.*;
 /**
  * Implement the methods stitch, seam and floodfill.
  */
@@ -36,7 +36,17 @@ public class Stitcher
 	 *   the illustration above.
 	 */
 	public List<Position> seam(int[][] image1, int[][] image2) {
-		throw new RuntimeException("not implemented yet");
+        ArrayList<Position> alPositions = new ArrayList<Position>();
+        Position pCurrent = new Position(0,0);
+        alPositions.add(pCurrent);
+        while (pCurrent.getX() != image1.length - 1 && pCurrent.getY() != image1[0].length) {
+            if (image1[pCurrent.getX() - 1][pCurrent.getY()] == image2[pCurrent.getX() - 1][pCurrent.getY()]){
+				pCurrent.setX(pCurrent.getX() - 1);
+
+            }
+        }
+
+        return alPositions;
 	}
 
 	/**
