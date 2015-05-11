@@ -42,7 +42,18 @@ public class Stitcher
         while (pCurrent.getX() != image1.length - 1 && pCurrent.getY() != image1[0].length) {
             if (image1[pCurrent.getX() - 1][pCurrent.getY()] == image2[pCurrent.getX() - 1][pCurrent.getY()]){
 				pCurrent.setX(pCurrent.getX() - 1);
-
+                alPositions.add(pCurrent);
+                continue;
+            }
+            if (image1[pCurrent.getX() + 1][pCurrent.getY()] == image2[pCurrent.getX() + 1][pCurrent.getY()]){
+                pCurrent.setX(pCurrent.getX() + 1);
+                alPositions.add(pCurrent);
+                continue;
+            }
+            if (image1[pCurrent.getX()][pCurrent.getY() - 1] == image2[pCurrent.getX()][pCurrent.getY() - 1]){
+                pCurrent.setY(pCurrent.getY() - 1);
+                alPositions.add(pCurrent);
+                continue;
             }
         }
 

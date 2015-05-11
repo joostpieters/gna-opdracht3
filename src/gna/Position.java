@@ -44,8 +44,8 @@ public class Position extends Object{
         return -1;
     }
 
-    @Override
-    public boolean equals(Position pObject){
 
+    public boolean equals(Position pObject) throws Exception {
+        throw new Exception("not inplemented");
     }
 }
