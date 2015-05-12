@@ -120,7 +120,7 @@ public class Stitcher
 	 * to check whether your implementation does this properly.
 	 */
 	public void floodfill(Stitch[][] mask) {
-
+        mask.
 
 	}
 
