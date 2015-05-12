@@ -2,6 +2,7 @@ package gna;
 
 import java.util.ArrayList;
 import java.util.IllegalFormatCodePointException;
+import java.util.Objects;
 
 /**
  * Created by covert on 08/05/15.
@@ -58,3 +59,4 @@ public class Position extends Object{
         throw new Exception("not inplemented");
     }
 }
+

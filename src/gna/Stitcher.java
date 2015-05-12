@@ -120,8 +120,23 @@ public class Stitcher
 	 * to check whether your implementation does this properly.
 	 */
 	public void floodfill(Stitch[][] mask) {
-        mask.
+		//find seam on every row
+		int[] iLocSeam = new int[mask.length];
+		for (int i = 0; i > mask.length;i++){
+			for (int j = 0 ; j> mask[0].length;j++){
+				if(mask[i][j] == Stitch.SEAM)
+					iLocSeam[i]=j;
+			}
+		}
+		for (int i = 0; i > mask.length;i++){
+			for (int j = 0 ; j> mask[0].length;j++){
+				if(j < iLocSeam[i])
+					mask[i][j]= Stitch.IMAGE1;
 
+				if(j > iLocSeam[i])
+					mask[i][j]= Stitch.IMAGE2;
+			}
+		}
 	}
 
 	/**
@@ -136,10 +151,16 @@ public class Stitcher
 	 * stitch two images.
 	 * 
 	 * image1 and image2 are both non-null and have equal dimensions.
+	 * use seam and floodfill to implement this method
 	 */
 	public Stitch[][] stitch(int[][] image1, int[][] image2) {
-		// use seam and floodfill to implement this method
-		throw new RuntimeException("not implemented yet");
+		ArrayList<Position> alpSeam = (ArrayList<Position>) seam(image1,image2);
+		Stitch[][] mask = new Stitch[image1.length][image1[0].length];
+		for (Position pTemp:alpSeam){
+			mask[pTemp.getX()][pTemp.getY()] = Stitch.SEAM;
+		}
+		floodfill(mask);
+		return mask;
 	}
 }
 
