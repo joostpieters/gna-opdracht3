@@ -52,7 +52,7 @@ public class Stitcher
                     continue;
                 }
                 //als array gevuld is
-                Position selectedPos = null;
+                Position selectedPos = alTemp.get(0);
                 for (Position pTemp:alTemp){
                     //als de nieuwer buur kleiner is dan de huidige kleinste -> zet nieuwe als kleinste
                     if(fncDiff(image1,image2,pTemp) < fncDiff(image1,image2,selectedPos)){
@@ -86,7 +86,7 @@ public class Stitcher
     }
     private int fncDiff(int[][] img1,int[][] img2,Position pCurrent) throws IllegalArgumentException{
         if(pCurrent == null)
-            throw new IllegalArgumentException;
+            throw new IllegalArgumentException();
         return fncDiff(img1, img2, pCurrent.getX(), pCurrent.getY());
     }
 
