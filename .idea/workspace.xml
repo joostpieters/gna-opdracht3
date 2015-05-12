@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0038bf54-712c-4317-942a-06c011204e49" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gna/Position.java" afterPath="$PROJECT_DIR$/src/gna/Position.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gna/Stitcher.java" afterPath="$PROJECT_DIR$/src/gna/Stitcher.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -29,14 +30,11 @@
       <file leaf-file-name="Stitcher.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gna/Stitcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12463768">
-              <caret line="60" column="61" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.6869565">
+              <caret line="122" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
               <folding>
-                <element signature="e#1416#1426#0" expanded="true" />
-                <element signature="e#3068#3069#0" expanded="true" />
-                <element signature="e#3128#3129#0" expanded="true" />
-                <element signature="e#4199#4200#0" expanded="true" />
-                <element signature="e#4255#4256#0" expanded="true" />
+                <element signature="e#3722#3732#0" expanded="true" />
+                <element signature="e#3792#3802#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -66,15 +64,13 @@
         <entry file="file://$PROJECT_DIR$/src/gna/Position.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="49" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#323#324#0" expanded="true" />
                 <element signature="e#348#349#0" expanded="true" />
                 <element signature="e#521#522#0" expanded="true" />
                 <element signature="e#546#547#0" expanded="true" />
-                <element signature="e#1471#1472#0" expanded="true" />
-                <element signature="e#1496#1497#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -361,7 +357,7 @@
       <workItem from="1431331124951" duration="6617000" />
       <workItem from="1431347458288" duration="3111000" />
       <workItem from="1431371361344" duration="1967000" />
-      <workItem from="1431373898607" duration="12131000" />
+      <workItem from="1431373898607" duration="18439000" />
     </task>
     <task id="LOCAL-00001" summary="seam wip&#10;+ idea">
       <created>1431337094596</created>
@@ -393,11 +389,17 @@
       <option name="project" value="LOCAL" />
       <updated>1431415964811</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="wip deftige implementatie">
+      <created>1431423714735</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1431423714735</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38359000" />
+    <option name="totallyTimeSpent" value="44667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="31" width="1366" height="737" extended-state="6" />
@@ -447,11 +449,12 @@
     <MESSAGE value="seam werkt bijna" />
     <MESSAGE value="seam cava" />
     <MESSAGE value="try" />
-    <option name="LAST_COMMIT_MESSAGE" value="try" />
+    <MESSAGE value="wip deftige implementatie" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip deftige implementatie" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="18" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -465,11 +468,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
           <folding>
-            <element signature="e#1416#1426#0" expanded="true" />
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3128#3129#0" expanded="true" />
-            <element signature="e#4199#4200#0" expanded="true" />
-            <element signature="e#4255#4256#0" expanded="true" />
+            <element signature="e#3722#3732#0" expanded="true" />
+            <element signature="e#3792#3802#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -492,8 +492,6 @@
             <element signature="e#348#349#0" expanded="true" />
             <element signature="e#521#522#0" expanded="true" />
             <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#1471#1472#0" expanded="true" />
-            <element signature="e#1496#1497#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -511,11 +509,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
-            <element signature="e#1416#1426#0" expanded="true" />
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3128#3129#0" expanded="true" />
-            <element signature="e#4199#4200#0" expanded="true" />
-            <element signature="e#4255#4256#0" expanded="true" />
+            <element signature="e#3722#3732#0" expanded="true" />
+            <element signature="e#3792#3802#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -538,8 +533,6 @@
             <element signature="e#348#349#0" expanded="true" />
             <element signature="e#521#522#0" expanded="true" />
             <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#1471#1472#0" expanded="true" />
-            <element signature="e#1496#1497#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -557,11 +550,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
           <folding>
-            <element signature="e#1416#1426#0" expanded="true" />
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3128#3129#0" expanded="true" />
-            <element signature="e#4199#4200#0" expanded="true" />
-            <element signature="e#4255#4256#0" expanded="true" />
+            <element signature="e#3722#3732#0" expanded="true" />
+            <element signature="e#3792#3802#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -584,8 +574,6 @@
             <element signature="e#348#349#0" expanded="true" />
             <element signature="e#521#522#0" expanded="true" />
             <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#1471#1472#0" expanded="true" />
-            <element signature="e#1496#1497#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -603,11 +591,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="64" selection-start-line="37" selection-start-column="64" selection-end-line="37" selection-end-column="64" />
           <folding>
-            <element signature="e#1416#1426#0" expanded="true" />
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3128#3129#0" expanded="true" />
-            <element signature="e#4199#4200#0" expanded="true" />
-            <element signature="e#4255#4256#0" expanded="true" />
+            <element signature="e#3722#3732#0" expanded="true" />
+            <element signature="e#3792#3802#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -622,8 +607,6 @@
             <element signature="e#348#349#0" expanded="true" />
             <element signature="e#521#522#0" expanded="true" />
             <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#1471#1472#0" expanded="true" />
-            <element signature="e#1496#1497#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -641,11 +624,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1416#1426#0" expanded="true" />
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3128#3129#0" expanded="true" />
-            <element signature="e#4199#4200#0" expanded="true" />
-            <element signature="e#4255#4256#0" expanded="true" />
+            <element signature="e#3722#3732#0" expanded="true" />
+            <element signature="e#3792#3802#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -660,8 +640,6 @@
             <element signature="e#348#349#0" expanded="true" />
             <element signature="e#521#522#0" expanded="true" />
             <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#1471#1472#0" expanded="true" />
-            <element signature="e#1496#1497#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -679,11 +657,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1416#1426#0" expanded="true" />
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3128#3129#0" expanded="true" />
-            <element signature="e#4199#4200#0" expanded="true" />
-            <element signature="e#4255#4256#0" expanded="true" />
+            <element signature="e#3722#3732#0" expanded="true" />
+            <element signature="e#3792#3802#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -698,8 +673,6 @@
             <element signature="e#348#349#0" expanded="true" />
             <element signature="e#521#522#0" expanded="true" />
             <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#1471#1472#0" expanded="true" />
-            <element signature="e#1496#1497#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -739,29 +712,24 @@
     <entry file="file://$PROJECT_DIR$/src/gna/Position.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="49" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#323#324#0" expanded="true" />
             <element signature="e#348#349#0" expanded="true" />
             <element signature="e#521#522#0" expanded="true" />
             <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#1471#1472#0" expanded="true" />
-            <element signature="e#1496#1497#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gna/Stitcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12463768">
-          <caret line="60" column="61" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.6869565">
+          <caret line="122" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
           <folding>
-            <element signature="e#1416#1426#0" expanded="true" />
-            <element signature="e#3068#3069#0" expanded="true" />
-            <element signature="e#3128#3129#0" expanded="true" />
-            <element signature="e#4199#4200#0" expanded="true" />
-            <element signature="e#4255#4256#0" expanded="true" />
+            <element signature="e#3722#3732#0" expanded="true" />
+            <element signature="e#3792#3802#0" expanded="true" />
           </folding>
         </state>
       </provider>

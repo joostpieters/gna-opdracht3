@@ -54,12 +54,6 @@ public class Position extends Object{
         }
         return apPos;
     }
-    @Override
-    public int hashCode(){
-        return -1;
-    }
-
-
     public boolean equals(Position pObject) throws Exception {
         throw new Exception("not inplemented");
     }

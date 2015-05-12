@@ -37,8 +37,9 @@ public class Stitcher
 	 *   {{A,B},{C,D}} as a test image, this corresponds to the image layout as shown in
 	 *   the illustration above.
 	 */
+    //TODO check
 	public List<Position> seam(int[][] image1, int[][] image2) {
-        ArrayList<Position> alPositions = new ArrayList<Position>();
+        ArrayList<Position> alPositions;
         Comparator pComparator = new PositionDiffComparator();
         int[][] iaCostMap = new int[image1.length][image1[0].length];
         for(int i = 0; i < image1.length; i++){
@@ -62,6 +63,10 @@ public class Stitcher
                 iaCostMap[i][j] = fncDiff(image1,image2,i,j) + fncDiff(image1,image2,selectedPos) ;
             }
         }
+        //path find
+        alPositions = fncFindPath(iaCostMap,new Position(iaCostMap.length-1,iaCostMap[0].length-1));
+
+
         //debug
         System.out.print("lol k");
         return alPositions;
@@ -76,13 +81,31 @@ public class Stitcher
         return false;
     }
 
-    private int fncDiff(int[][] img1,int[][] img2,int iX, int iY){
+    private int fncDiff(int[][] img1,int[][] img2,int iX, int iY)throws ArrayIndexOutOfBoundsException{
         return Math.abs(img1[iX][iY] - img2[iX][iY]);
     }
-    private int fncDiff(int[][] img1,int[][] img2,Position pCurrent){
+    private int fncDiff(int[][] img1,int[][] img2,Position pCurrent) throws IllegalArgumentException{
         if(pCurrent == null)
-            return Integer.MAX_VALUE;
-        return fncDiff(img1,img2,pCurrent.getX(),pCurrent.getY());
+            throw new IllegalArgumentException;
+        return fncDiff(img1, img2, pCurrent.getX(), pCurrent.getY());
+    }
+
+    private ArrayList<Position> fncFindPath(int[][] iaPath,Position pStart) throws ArrayIndexOutOfBoundsException,RuntimeException{
+        ArrayList<Position> alPositions = new ArrayList<Position>();
+        ArrayList<Position> alNieghbours = new ArrayList<Position>();
+        alPositions.add(pStart);
+        if(pStart.getY() == 0) {
+            return alPositions;
+        }
+        alNieghbours = pStart.fncGetTopNeighbours(iaPath.length,iaPath[0].length);
+        Position pSelected = alNieghbours.get(0);
+        for (Position pTemp:alNieghbours){
+            if(iaPath[pTemp.getX()][pTemp.getY()] < iaPath[pSelected.getX()][pSelected.getY()]){
+                pSelected = pTemp;
+            }
+        }
+        alPositions.addAll(fncFindPath(iaPath,pSelected));
+        return alPositions;
     }
 	/**
 	 * Apply the floodfill algorithm described in the assignment to mask. You can assume the mask
@@ -97,7 +120,8 @@ public class Stitcher
 	 * to check whether your implementation does this properly.
 	 */
 	public void floodfill(Stitch[][] mask) {
-		throw new RuntimeException("not implemented yet");
+
+
 	}
 
 	/**
