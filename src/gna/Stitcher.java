@@ -37,47 +37,17 @@ public class Stitcher
 	 */
 	public List<Position> seam(int[][] image1, int[][] image2) {
         ArrayList<Position> alPositions = new ArrayList<Position>();
+        Comparator pComparator = new PositionDiffComparator();
+        PriorityQueue<Position> pqPos = new PriorityQueue<Position>(image1.length*image1[0].length,pComparator);
         Position pCurrent = new Position(0,0);
         alPositions.add(new Position(pCurrent.getX(),pCurrent.getY()));
-        while (pCurrent.getX() != image1.length - 1 && pCurrent.getY() != image1[0].length - 1) {
-            try {
-                if (image1[pCurrent.getX() + 1][pCurrent.getY()] == image2[pCurrent.getX() + 1][pCurrent.getY()]){
-                    if(!fncAllinList(alPositions ,new Position(pCurrent.getX() + 1,pCurrent.getY()))) {
-                        pCurrent.setX(pCurrent.getX() + 1);
-                        alPositions.add(new Position(pCurrent.getX(), pCurrent.getY()));
-                        continue;
-                    }
-                }
-            } catch (ArrayIndexOutOfBoundsException e) {}
-            try {
-                if (image1[pCurrent.getX() - 1][pCurrent.getY()] == image2[pCurrent.getX() - 1][pCurrent.getY()]){
-                    if(!fncAllinList(alPositions ,new Position(pCurrent.getX() - 1,pCurrent.getY()))) {
-                        pCurrent.setX(pCurrent.getX() - 1);
-                        alPositions.add(new Position(pCurrent.getX(), pCurrent.getY()));
-                        continue;
-                    }
-                }
-            } catch (ArrayIndexOutOfBoundsException e) {}
-            try {
-                if (image1[pCurrent.getX()][pCurrent.getY() + 1] == image2[pCurrent.getX()][pCurrent.getY() + 1]){
-                    if(!fncAllinList(alPositions ,new Position(pCurrent.getX(),pCurrent.getY() + 1))) {
-                        pCurrent.setY(pCurrent.getY() + 1);
-                        alPositions.add(new Position(pCurrent.getX(), pCurrent.getY()));
-                        continue;
-                    }
-                }
-            } catch (ArrayIndexOutOfBoundsException e) {}
-            try {
-                if (image1[pCurrent.getX()][pCurrent.getY() - 1] == image2[pCurrent.getX()][pCurrent.getY() - 1]){
-                    if(!fncAllinList(alPositions ,new Position(pCurrent.getX(),pCurrent.getY()- 1))) {
-                        pCurrent.setY(pCurrent.getY() - 1);
-                        alPositions.add(new Position(pCurrent.getX(), pCurrent.getY()));
-                        continue;
-                    }
-                }
-            } catch (ArrayIndexOutOfBoundsException e) {}
+        while(true){
+            ArrayList<Position> alTemp = new ArrayList<Position>();
+            alTemp = pCurrent.fncGetNeighbours(image1.length,image1[0].length);
+            for (Position pTemp:alTemp){
+
+            }
         }
-        //alPositions.add(new Position(image1.length,image1[0].length));
         return alPositions;
 	}
 
