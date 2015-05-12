@@ -40,16 +40,18 @@ public class Position extends Object{
         return true;
     }
 
-    public ArrayList<Position> fncGetNeighbours(int iMaxX, int iMaxY){
+    public ArrayList<Position> fncGetTopNeighbours(int iMaxX, int iMaxY){
         ArrayList<Position> apPos = new ArrayList<>();
-        if(iX + 1 < 0 && iX + 1 >= iMaxX)
-            apPos.add(new Position(iX + 1, iY));
-        if(iX - 1 < 0 && iX - 1 >= iMaxX)
-            apPos.add(new Position(iX - 1, iY));
-        if(iY -1 < 0 && iY -1 >= iMaxY)
-            apPos.add(new Position(iX,iY -1));
-        if(iY + 1 < 0 && iY +1 >= iMaxY)
-            apPos.add(new Position(iX,iY +1));
+        if(iY - 1 >= 0 && iY - 1 <= iMaxY - 1) {
+            apPos.add(new Position(iX , iY - 1));
+
+            if(iX - 1 >=0 && iX -1 <= iMaxX - 1){
+                apPos.add(new Position(iX - 1,iY -1));
+            }
+            if(iX + 1 >= 0 && iX + 1 <= iMaxX - 1){
+                apPos.add(new Position(iX + 1 , iY - 1));
+            }
+        }
         return apPos;
     }
     @Override
