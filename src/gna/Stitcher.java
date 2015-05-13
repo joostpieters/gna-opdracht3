@@ -2,6 +2,7 @@ package gna;
 
 import java.util.*;
 
+import javafx.geometry.Pos;
 import libpract.*;
 
 /**
@@ -38,73 +39,33 @@ public class Stitcher
 	 */
 
 	public List<Position> seam(int[][] image1, int[][] image2) {
-        ArrayList<Position> alPositions;
-        Comparator pComparator = new PositionDiffComparator();
-        int[][] iaCostMap = new int[image1.length][image1[0].length];
-        for(int i = 0; i < image1.length; i++){
-            for(int j =0; j <image1[0].length;j++){
-                //top Neighbours
-                ArrayList<Position> alTemp = new Position(i,j).fncGetTopNeighbours(image1.length,image1[0].length);
-                //als array leeg is skip zonder checking
-                if (alTemp.size() == 0) {
-                    iaCostMap[i][j] = fncDiff(i, j);
-                    continue;
-                }
-                //als array gevuld is
-                Position selectedPos = alTemp.get(0);
-                for (Position pTemp:alTemp){
-                    //als de nieuwer buur kleiner is dan de huidige kleinste -> zet nieuwe als kleinste
-                    if(fncDiff(pTemp) < fncDiff(selectedPos)){
-                        selectedPos = pTemp;
-                    }
-                }
-                //dif van huidige pos + dif van kleinste buur pos
-                iaCostMap[i][j] = fncDiff(i,j) + fncDiff(selectedPos) ;
-            }
-        }
-        //path find
-        alPositions = fncFindPath(iaCostMap,new Position(iaCostMap.length-1,iaCostMap[0].length-1));
+		int[][] iaCost = new int[image1.length][image1[0].length];
+		Position[][] pFrom = new Position[image1.length][image1[0].length];
+		Position pVorige = new Position(0,0);
+		Position pCurrent = new Position(0,0);
+		ArrayList<Position> alpVisited = new ArrayList<>();
+		alpVisited.add(pCurrent);
+		while (pCurrent.getX() != image1.length- 1 && pCurrent.getY() != image1[0].length) {
+			ArrayList<Position> alpNeighbours = pCurrent.fncGetTopNeighbours(image1.length, image1[0].length);
+			for (Position pTemp : alpNeighbours) {
+				if (iaCost[pTemp.getX()][pTemp.getY()] < fncDiff(pTemp) + fncDiff(pVorige)) {
+					iaCost[pTemp.getX()][pTemp.getY()] = fncDiff(pTemp) + fncDiff(pVorige);
+					pFrom[pTemp.getX()][pTemp.getY()] = pTemp;
+					if (pTemp.getX() != image1.length - 1 && pTemp.getY() != image1[0].length)
+						break;
+				}
+			}
 
+			alpVisited.add(pCurrent);
+		}
+		return alpVisited;
+    }
 
-        //debug
-        return alPositions;
+	private int fncDiff(Position pCurrent) throws IllegalArgumentException{
+		if(pCurrent == null)
+			throw new IllegalArgumentException();
+		return ImageCompositor.pixelSqDistance(pCurrent.getX(), pCurrent.getY());
 	}
-
-    @Deprecated
-    private boolean fncAlrinList(ArrayList<Position> alPos, Position cPoss) {
-        for (Position selectedPos:alPos){
-            if (selectedPos.getX() == cPoss.getX() && selectedPos.getY() == cPoss.getY())
-                return true;
-        }
-        return false;
-    }
-
-    private int fncDiff(int iX, int iY)throws ArrayIndexOutOfBoundsException{
-        return ImageCompositor.pixelSqDistance(iX,iY);
-    }
-    private int fncDiff(Position pCurrent) throws IllegalArgumentException{
-        if(pCurrent == null)
-            throw new IllegalArgumentException();
-        return fncDiff(pCurrent.getX(), pCurrent.getY());
-    }
-
-    private ArrayList<Position> fncFindPath(int[][] iaPath,Position pStart) throws ArrayIndexOutOfBoundsException,RuntimeException{
-        ArrayList<Position> alPositions = new ArrayList<Position>();
-        ArrayList<Position> alNieghbours = new ArrayList<Position>();
-        alPositions.add(pStart);
-        if(pStart.getY() == 0) {
-            return alPositions;
-        }
-        alNieghbours = pStart.fncGetTopNeighbours(iaPath.length,iaPath[0].length);
-        Position pSelected = alNieghbours.get(0);
-        for (Position pTemp:alNieghbours){
-            if(iaPath[pTemp.getX()][pTemp.getY()] < iaPath[pSelected.getX()][pSelected.getY()]){
-                pSelected = pTemp;
-            }
-        }
-        alPositions.addAll(fncFindPath(iaPath,pSelected));
-        return alPositions;
-    }
 	/**
 	 * Apply the floodfill algorithm described in the assignment to mask. You can assume the mask
 	 * contains a seam from the upper left corner to the bottom right corner. Each position in the

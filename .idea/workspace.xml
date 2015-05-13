@@ -4,7 +4,6 @@
     <list default="true" id="0038bf54-712c-4317-942a-06c011204e49" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gna/Position.java" afterPath="$PROJECT_DIR$/src/gna/Position.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gna/Stitcher.java" afterPath="$PROJECT_DIR$/src/gna/Stitcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gna/Tests.java" afterPath="$PROJECT_DIR$/src/gna/Tests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gna-opdracht3.iws" />
@@ -33,8 +32,8 @@
       <file leaf-file-name="Stitcher.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gna/Stitcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51527494" vertical-offset="1362" max-vertical-offset="3196">
-              <caret line="95" column="31" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.6602564" vertical-offset="574" max-vertical-offset="2533">
+              <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,8 +64,8 @@
       <file leaf-file-name="Position.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gna/Position.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
-              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1065" max-vertical-offset="1751">
+              <caret line="89" column="45" selection-start-line="89" selection-start-column="45" selection-end-line="89" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,9 +92,9 @@
         <option value="$PROJECT_DIR$/src/gna/TestsTest.java" />
         <option value="$PROJECT_DIR$/src/gna/PositionDiffComparator.java" />
         <option value="$PROJECT_DIR$/src/gna/Stitch.java" />
-        <option value="$PROJECT_DIR$/src/gna/Stitcher.java" />
-        <option value="$PROJECT_DIR$/src/gna/Position.java" />
         <option value="$PROJECT_DIR$/src/gna/Tests.java" />
+        <option value="$PROJECT_DIR$/src/gna/Position.java" />
+        <option value="$PROJECT_DIR$/src/gna/Stitcher.java" />
       </list>
     </option>
   </component>
@@ -414,7 +413,7 @@
       <workItem from="1431371361344" duration="1967000" />
       <workItem from="1431373898607" duration="21265000" />
       <workItem from="1431442610248" duration="1172000" />
-      <workItem from="1431466825531" duration="15662000" />
+      <workItem from="1431466825531" duration="20606000" />
     </task>
     <task id="LOCAL-00001" summary="seam wip&#10;+ idea">
       <created>1431337094596</created>
@@ -470,11 +469,17 @@
       <option name="project" value="LOCAL" />
       <updated>1431471332500</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="net voor dijkstra">
+      <created>1431505756939</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1431505756939</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64327000" />
+    <option name="totallyTimeSpent" value="69271000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -500,7 +505,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3993576" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28800857" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -534,20 +539,21 @@
     <MESSAGE value="seam done denk k" />
     <MESSAGE value="wip lololololol" />
     <MESSAGE value="inplementatie klaar (zo goe als)" />
-    <option name="LAST_COMMIT_MESSAGE" value="inplementatie klaar (zo goe als)" />
+    <MESSAGE value="net voor dijkstra" />
+    <option name="LAST_COMMIT_MESSAGE" value="net voor dijkstra" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/gna/Stitcher.java</url>
-          <line>176</line>
+          <line>137</line>
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/gna/Stitcher.java</url>
-          <line>167</line>
+          <line>128</line>
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
@@ -557,8 +563,20 @@
           <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/gna/Stitcher.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/gna/Stitcher.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="34" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -867,14 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gna/PositionDiffComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32938644" vertical-offset="0" max-vertical-offset="929">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/libpract.jar!/libpract/Stitch.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.72" vertical-offset="0" max-vertical-offset="323">
@@ -931,16 +941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gna/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gna/Tests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="347" max-vertical-offset="867">
@@ -949,10 +949,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/gna/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1065" max-vertical-offset="1751">
+          <caret line="89" column="45" selection-start-line="89" selection-start-column="45" selection-end-line="89" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gna/PositionDiffComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48037678" vertical-offset="0" max-vertical-offset="637">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/gna/Stitcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51527494" vertical-offset="1362" max-vertical-offset="3196">
-          <caret line="95" column="31" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.6602564" vertical-offset="574" max-vertical-offset="2533">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
