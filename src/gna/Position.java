@@ -55,8 +55,6 @@ public class Position extends Object{
         }
         return apPos;
     }
-    public boolean equals(Position pObject) throws Exception {
-        throw new Exception("not inplemented");
-    }
+
 }
 
